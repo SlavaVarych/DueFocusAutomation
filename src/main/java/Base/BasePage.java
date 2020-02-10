@@ -13,6 +13,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.awt.*;
+import java.util.Date;
+import java.util.UUID;
 
 import static Base.BaseTest.getDriver;
 
@@ -190,10 +192,21 @@ public void sendDataToField(By element, int waitTime, String data){
     getDriver().findElement(element).sendKeys(data);
 }
 
-public void openNewWindow() throws AWTException {
+    public String createGUIDName(){
+        String name = UUID.randomUUID().toString().replace("-","");
+        String onlyAlphaNumeric = name.replaceAll("[^a-zA-z]", "");
+        System.out.println(name);
+        System.out.println(onlyAlphaNumeric);
+        return "RandName" + onlyAlphaNumeric;
 
-}
 
+    }
+
+    public String createUniqueEmail() {
+        Date date = new Date();
+        String email = "duefocus.user." + date.toString().replaceAll("\\s+", "").replaceAll(":", ".") + "@duefocus.com";
+        return email;
+    }
 
 
 

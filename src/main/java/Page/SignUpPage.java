@@ -37,9 +37,9 @@ public class SignUpPage extends BasePage {
 
 
         click(createNewAccount, waitTime);
-        sendDataToField(firstNameField, waitTime, USER.getFirstName());
-        sendDataToField(lastNameField, waitTime, USER.getLastName());
-        sendDataToField(emailField, waitTime, USER.getEmail());
+        sendDataToField(firstNameField, waitTime, createGUIDName());
+        sendDataToField(lastNameField, waitTime, createGUIDName());
+        sendDataToField(emailField, waitTime, createUniqueEmail());
         sendDataToField(passwordField, waitTime, USER.getPassword());
         click(passwordHint, waitTime);
         click(checkBox, waitTime);

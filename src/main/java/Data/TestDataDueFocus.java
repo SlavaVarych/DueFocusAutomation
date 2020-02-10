@@ -26,9 +26,9 @@ public class TestDataDueFocus {
     }
 
     public enum SignUpUser{
-        USER1("Slavon", "Varych", "testqwe%d@test.com", "Qwe12345678");
+        USER1("Slavon", "Varych", "test@test.com", "Qwe12345678");
 
-        String str;
+
 
         private String firstName;
         private String lastName;
